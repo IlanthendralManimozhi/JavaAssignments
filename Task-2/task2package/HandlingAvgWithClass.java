@@ -40,6 +40,5 @@ class RangeException extends Exception {
 	// than zero or greater than 100.
 	public String printTraceback() {
 		return "Out of Range";
-
 	}
 }
