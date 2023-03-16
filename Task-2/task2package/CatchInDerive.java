@@ -1,7 +1,7 @@
 package task2package;
 public class CatchInDerive {
     public static void main(String[] args) {
-        Derived D = new Derived();
+        Derived derived = new Derived();
     }
 }
 

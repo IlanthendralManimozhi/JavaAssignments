@@ -8,14 +8,14 @@ public class ExceptionFromPrevTask {
 		} catch (Exception e) {
 			System.out.println("Exception catched " +e.getMessage());
 		}
-		new WithoutCatch().NoCatch();
+		new WithoutCatch().noCatch();
 		System.out.println("After Exception");
 
 	}
 
 }
 class WithoutCatch{
-	public void NoCatch() throws Exception{//the method throws Exception 
+	public void noCatch() throws Exception{//the method throws Exception 
 		
 			throw new Exception();// Here I throw my own exception
 		
