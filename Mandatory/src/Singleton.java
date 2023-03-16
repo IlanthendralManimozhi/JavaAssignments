@@ -1,5 +1,5 @@
 class Test {
-	private static Test privateobject;
+	private static Test privateObject;
 
 	private Test() {
 		int count = 0;
@@ -9,10 +9,10 @@ class Test {
 	public static Test getobj() {
 
 		if (privateobject == null) {
-			privateobject = new Test();//object created only if it is null
+			privateObject = new Test();//object created only if it is null
 		}
 
-		return privateobject;//return same object
+		return privateObject;//return same object
 	}
 
 }
