@@ -7,8 +7,14 @@ public class AreaPerimeter {
 		Square objSquare = new Square();
 		Triangle objTriangle = new Triangle();
 		Cuboid objCuboid = new Cuboid();
-		System.out.println("Enter side: ");
 		Sphere objSphere = new Sphere();
+		objCircle.area();
+		objSquare.area();
+		objTriangle.area();
+		objCuboid.area();
+		objCuboid.volume();
+		objSphere.area();
+		objSphere.volume();
 	}
 
 }
@@ -23,7 +29,7 @@ interface CalcVolume {
 
 class Square implements CalcArea {
 	Square() {
-		area();
+		
 	}
 
 	public void area()// overriding Interface function
@@ -34,13 +40,12 @@ class Square implements CalcArea {
 		side = sc.nextInt();
 		int area = side * side;// Calculating area
 		System.out.println("Area of Square :" + area);
-		sc.close();
 	}
 }
 
 class Circle implements CalcArea {
 	Circle() {
-		area();
+		
 	}
 
 	public void area()// overriding Interface function
@@ -51,13 +56,12 @@ class Circle implements CalcArea {
 		radius = sc.nextInt();
 		float area = ((float) (radius * radius)) * 3.14f;
 		System.out.println("Area of Circle :" + area);
-		sc.close();
 	}
 }
 
 class Triangle implements CalcArea {
 	Triangle() {
-		area();
+		
 	}
 
 	public void area()// overriding Interface function
@@ -70,14 +74,11 @@ class Triangle implements CalcArea {
 		height = sc.nextInt();
 		int area = base * height * 1 / 2;
 		System.out.println("Area of Triangle :" + area);
-		sc.close();
 	}
 }
 
 class Sphere implements CalcVolume, CalcArea {
 	Sphere() {
-		area();
-		volume();
 	}
 
 	public void area()// overriding Interface function
@@ -88,7 +89,7 @@ class Sphere implements CalcVolume, CalcArea {
 		radius = sc.nextInt();
 		float area = ((float) (radius * radius)) * 3.14f;
 		System.out.println("Area of sphere :" + area);
-		sc.close();
+
 	}
 
 	public void volume() {// overriding Interface function
@@ -98,14 +99,13 @@ class Sphere implements CalcVolume, CalcArea {
 		radius = sc.nextInt();
 		float volume = ((float) (radius * radius * radius) * 4 / 3) * 3.14f;
 		System.out.println("Volume of Sphere :" + volume);
-		sc.close();
+		
 	}
 }
 
 class Cuboid implements CalcVolume, CalcArea {
 	Cuboid() {
-		area();
-		volume();
+		
 	}
 
 	public void area()// overriding Interface function
@@ -116,7 +116,7 @@ class Cuboid implements CalcVolume, CalcArea {
 		side = sc.nextInt();
 		int area = side * side;
 		System.out.println("Area of cuboid :" + area);
-		sc.close();
+
 	}
 
 	public void volume() {// overriding Interface function
@@ -126,7 +126,7 @@ class Cuboid implements CalcVolume, CalcArea {
 		side = sc.nextInt();
 		int volume = side * side * side;
 		System.out.println("Volume of cuboid :" + volume);
-		sc.close();
+		
 
 	}
 }

@@ -9,7 +9,9 @@ public class ClassObservation {
 }
 
 class A {
-
+A(){
+	
+}
 }
 
 class B {
