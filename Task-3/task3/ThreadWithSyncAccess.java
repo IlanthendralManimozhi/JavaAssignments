@@ -20,44 +20,46 @@ public class ThreadWithSyncAccess {
 	 */
 	public static void main(String[] args) {
 
-		ExecutorService poolOfThread = Executors.newFixedThreadPool(20);// creating thread pool
+		ExecutorService poolOfThread = Executors.newFixedThreadPool(9);// creating thread pool
 		poolOfThread.execute(() -> {
-			displayMessage(new Thread().getName());
+			displayMessage(Thread.currentThread().getName());
 			System.out.println("Hi, this is Thread-01");
 		});
 		poolOfThread.execute(() -> {
-			displayMessage(new Thread().getName());
+			displayMessage( Thread.currentThread().getName());
 			System.out.println("Hi, this is Thread-02");
 		});
 		poolOfThread.execute(() -> {
-			displayMessage(new Thread().getName());
+			displayMessage(Thread.currentThread().getName());
 			System.out.println("Hi, this is Thread-03");
 		});
 		poolOfThread.execute(() -> {
-			displayMessage(new Thread().getName());
+			displayMessage(Thread.currentThread().getName());
 			System.out.println("Hi, this is Thread-04");
 		});
 		poolOfThread.execute(() -> {
-			displayMessage(new Thread().getName());
+			displayMessage(Thread.currentThread().getName());
 			System.out.println("Hi, this is Thread-05");
 		});
 		poolOfThread.execute(() -> {
-			displayMessage(new Thread().getName());
+			displayMessage(Thread.currentThread().getName());
 			System.out.println("Hi, this is Thread-06");
 		});
 		poolOfThread.execute(() -> {
-			displayMessage(new Thread().getName());
+			displayMessage(Thread.currentThread().getName());
 			System.out.println("Hi, this is Thread-07");
 		});
 		poolOfThread.execute(() -> {
-			displayMessage(new Thread().getName());
+			Thread.currentThread().setName("Thendral");
+			displayMessage(Thread.currentThread().getName());
 			System.out.println("Hi, this is Thread-08");
 		});
 		poolOfThread.execute(() -> {
-			displayMessage(new Thread().getName());
+			displayMessage(Thread.currentThread().getName());
 			System.out.println("Hi, this is Thread-09");
 		});
 
+		poolOfThread.shutdown();
 	}
 
 	/*

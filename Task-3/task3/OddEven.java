@@ -29,6 +29,7 @@ public class OddEven {
 		poolOfThread.execute(() -> {
 			performDetection.odd(startNumber, endNumber);
 		});
+		poolOfThread.shutdown();
 	}
 
 }
