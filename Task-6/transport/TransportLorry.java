@@ -111,10 +111,10 @@ public class TransportLorry {
     	System.out.println("Enter Distance :");
     	distance=sc.nextDouble();
  
-        TransportLorry lorry = new TransportLorry(speedGot); // Assume speed is 50 km/h
-        LocalDate date = LocalDate.of(year, month, day); // Friday
-        LocalTime time = LocalTime.of(10, 0); // 10:00 AM
-        // Assume distance is 200 km
+        TransportLorry lorry = new TransportLorry(speedGot); // Assume speed is  km/h
+        LocalDate date = LocalDate.of(year, month, day); // given value
+        LocalTime time = LocalTime.of(10, 0); // given time
+        // Assume distance in km
 
         LocalTime arrivalTime = lorry.calculateArrivalTime(date, time, distance);
         LocalDate arrivalDate=lorry.calculateArrivalDate(date, arrivalTime, distance);
